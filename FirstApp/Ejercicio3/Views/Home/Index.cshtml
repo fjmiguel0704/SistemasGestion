@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    DateTime horaActual = DateTime.Now;
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>Hola, son las @horaActual.Hour:@horaActual.Minute</h1>
+
+@{
+    if (@horaActual.Hour >= 12)
+    {
+        <p>Hemos pasado las 12 del mediodia</p>
+    }
+
+    else
+    {
+        <p>No hemos pasado las 12 del mediodia</p>    
+    }
+}
+
+<p>Hoy es @horaActual.ToLongDateString()</p>

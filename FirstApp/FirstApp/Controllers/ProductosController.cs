@@ -4,7 +4,7 @@ namespace Ejercicio1y2.Controllers
 {
     public class ProductosController : Controller
     {
-        public IActionResult Index()
+        public IActionResult ListadoProductos()
         {
             return View();
         }
