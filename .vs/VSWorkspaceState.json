@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\FirstApp",
-    "\\FirstApp\\FirstApp",
-    "\\FirstApp\\FirstApp\\Controllers"
+    ""
   ],
-  "SelectedNode": "\\FirstApp\\FirstApp\\Controllers\\HomeController.cs",
+  "SelectedNode": "\\FirstApp.sln",
   "PreviewInSolutionExplorer": false
 }

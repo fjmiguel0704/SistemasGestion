@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fjmiguel\\Desktop\\2ºDAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj": {}
+    "C:\\Users\\fjmiguel\\Desktop\\2DAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fjmiguel\\Desktop\\2ºDAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj": {
+    "C:\\Users\\fjmiguel\\Desktop\\2DAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fjmiguel\\Desktop\\2ºDAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj",
+        "projectUniqueName": "C:\\Users\\fjmiguel\\Desktop\\2DAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj",
         "projectName": "Ejercicio3",
-        "projectPath": "C:\\Users\\fjmiguel\\Desktop\\2ºDAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj",
+        "projectPath": "C:\\Users\\fjmiguel\\Desktop\\2DAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\Ejercicio3.csproj",
         "packagesPath": "C:\\Users\\fjmiguel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fjmiguel\\Desktop\\2ºDAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\obj\\",
+        "outputPath": "C:\\Users\\fjmiguel\\Desktop\\2DAM\\GitHub\\GestionEmpresarial\\FirstApp\\Ejercicio3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
