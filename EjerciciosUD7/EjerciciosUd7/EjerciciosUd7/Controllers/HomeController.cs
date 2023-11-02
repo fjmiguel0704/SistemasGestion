@@ -1,4 +1,5 @@
 ﻿using Ejercicio1Ud7.Models.Entidades;
+using Ejercicio1y2Ud7.Models.DAL;
 using EjerciciosUd7.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -30,6 +31,17 @@ namespace EjerciciosUd7.Controllers
 
             return View(per);
 
+        }
+
+        public IActionResult listadoPersonas()
+        {
+            try {
+                return View(ListaPersonas.listadoCompletoPersonas());
+            } 
+            catch (Exception ex) {
+                return View("Error");
+            }
+            
         }
 
     }

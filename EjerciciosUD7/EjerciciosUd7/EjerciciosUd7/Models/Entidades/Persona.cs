@@ -11,6 +11,7 @@ namespace Ejercicio1Ud7.Models.Entidades
         #region atributos
         private String nombre;
         private String apellidos;
+        private int idDept;
         #endregion
 
         #region constructores
@@ -19,10 +20,11 @@ namespace Ejercicio1Ud7.Models.Entidades
             nombre = "";
         }
 
-        public Persona(String nombre, String apellidos)
+        public Persona(String nombre, String apellidos, int dept)
         {
             this.nombre = nombre;
             this.apellidos = apellidos;
+            this.idDept = dept;
         }
         #endregion
 
@@ -36,6 +38,11 @@ namespace Ejercicio1Ud7.Models.Entidades
         {
             get { return apellidos; }
             set { apellidos = value; }
+        }
+        public int IdDept 
+        {
+            get { return idDept; }
+            set { idDept = value; }
         }
 
         public String Direccion { get; set; }
