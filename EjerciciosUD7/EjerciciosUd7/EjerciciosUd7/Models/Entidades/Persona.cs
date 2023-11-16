@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio1Ud7.Models.Entidades
+﻿namespace Ejercicio1Ud7.Models.Entidades
 {
     public class Persona
     {
@@ -25,6 +19,12 @@ namespace Ejercicio1Ud7.Models.Entidades
             this.nombre = nombre;
             this.apellidos = apellidos;
             this.idDept = dept;
+        }
+
+        public Persona(String nombre, String apellidos)
+        {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
         }
         #endregion
 

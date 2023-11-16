@@ -14,13 +14,13 @@ namespace EjerciciosUd7.Controllers
             Persona per = new Persona();
             DateTime fechaYhoraActual = DateTime.Now;
 
-            ViewBag.HoraActual = fechaYhoraActual.ToLongTimeString();
+            ViewBag.HoraActual = fechaYhoraActual.ToLongDateString();
 
             if (fechaYhoraActual.Hour >= 7 && fechaYhoraActual.Hour < 12) 
             {
                 ViewData["Saludo"] = "Buenos días";
             }
-            else if (fechaYhoraActual.Hour >= 12 && fechaYhoraActual.Hour < 9) {
+            else if (fechaYhoraActual.Hour >= 12 && fechaYhoraActual.Hour < 21) {
                 ViewData["Saludo"] = "Buenas tardes";
             } else {
                 ViewData["Saludo"] = "Buenas noches";
