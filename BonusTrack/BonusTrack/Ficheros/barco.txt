@@ -1,0 +1,16 @@
+Capa Entidades:
+	clsMisiones: // Con ella definiremos objetos para cada una de las misiones del mandaloriano
+		-Atributos //Mostrarán su valor en la vista
+		-Constructores // Recibirán el nombre de la mision y asignaran valor al atributo
+		-Get/Set //Devolverán y actualizaran el valor de un atributo
+		-Propiedades //Propiedades de los atributos
+
+Capa UI:
+	Views:
+		Index //Muestra la vista del listado de misiones con su botón "detalles"
+	Contollers:
+		Home //Devuelve el Action Index 
+	Models:
+		clsListadoMisiones: //Devuelve un objeto (listado misiones) de la clase clsMisiones
+			List <clsMisiones> listadoCompletoMisiones // En el se guardan los nombre de cada una de las misiones
+		
