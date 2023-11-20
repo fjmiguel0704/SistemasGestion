@@ -1,8 +1,22 @@
-﻿@{
+﻿@using Biblioteca
+@model List<Biblioteca.clsMisiones>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@{  
+    if (Model != null){
+        
+        foreach (clsMisiones misiones in Model)
+        {
+            <hr/>
+            <h1>@misiones.NombreMision</h1>
+            <hr />
+        }
+    }
+    else
+    {
+        <p>No hay misiones</p>
+    }
+}   
