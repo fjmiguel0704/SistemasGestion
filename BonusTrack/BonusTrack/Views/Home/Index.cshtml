@@ -1,36 +1,45 @@
-﻿@using Biblioteca
-@using BonusTrack.Models
-@model clsMisiones
+﻿@model BonusTrack.Models.VM.ViewModel;
+@using Biblioteca;
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
-
-<select>
-    @{
-            foreach (clsMisiones misiones in ListadoMisiones.listarMisiones())
-            {
-                if (Model != null)
-                {
-                    <option selected value="@Model.NombreMision">@Model.NombreMision</option>
-                }
-                else
-                {
-                    <option value="@misiones.NombreMision">@misiones.NombreMision</option>
-                }              
-            }   
-}   
-
-</select>
-
-
-
 @using (Html.BeginForm(FormMethod.Post))
 {
-    <button type="submit"
-            style="border:groove; border-radius:10px"
-            action="Index">
-        Detalles
-    </button>
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <select name="nombreMision">
+            @{
+                if (Model != null && Model.listadoMisiones != null)
+                {
+                    foreach (clsMisiones misiones in Model.listadoMisiones)
+                    {
+                        if (Model != null && Model.NombreMision == misiones.NombreMision)
+                        {
+                            <option selected value="@Model.NombreMision">@Model.NombreMision</option>
+                        }
+                        else
+                        {
+                            <option value="@misiones.NombreMision">@misiones.NombreMision</option>
+                        }
+                    }
+                }
+
+                
+            }
+
+        </select>
+
+        <input type="submit"
+                style="border:groove; border-radius:10px"
+                value="Detalles"/>
+        
+    </form>
+}
+
+@if (Model != null)
+{
+    <h1>@Model.NombreMision</h1>
+    <h3>@Model.Descripcion</h3>
+    <p style="font-size:20px">@Model.Creditos</p>
 }

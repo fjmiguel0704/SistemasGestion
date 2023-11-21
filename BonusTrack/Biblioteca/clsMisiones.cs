@@ -15,18 +15,14 @@ namespace Biblioteca
         #endregion
 
         #region constructores
+
         public clsMisiones()
         {
-            nombreMision= "";
         }
 
-        public clsMisiones(String mision)
+        public clsMisiones(String mision, String descripcionMision, String credito)
         {
-            this.nombreMision =mision;
-        }
-
-        public clsMisiones(String descripcionMision, String credito)
-        {
+            this.nombreMision = mision;
             this.descripMision = descripcionMision;
             this.creditos = credito;
         }

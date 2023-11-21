@@ -6,14 +6,29 @@ Capa Entidades:
 		-Propiedades //Propiedades de los atributos
 
 Capa UI:
-	Views:
-		Index //Muestra la vista del listado de misiones con su botón "detalles"
-	Contollers:
-		Home //Devuelve el Action Index pasando por parametro la lista de misiones
-			List<clsMisiones> listaMisiones // Guardará el listado de misiones llamando a la funcion de la clase clsListadoMisiones que devuelve dicho listado
-            return View(listaMisiones)
-	Models:
+
+	DAL:
 		clsListadoMisiones: //Devuelve un objeto (listado misiones) de la clase clsMisiones
 			List <clsMisiones> listadoCompletoMisiones // En el se guardan los nombre de cada una de las misiones
 			return listadoCompletoMisiones
+
+	Views:
+		Index //Muestra la vista del listado de misiones con su botón "detalles" y los detalles de cada una de las misiones
+	
+	Contollers:
+		Home //Devuelve el Action Index
+			public IActionResult Index(){  // Envía la lista de misiones
+				return View(VM);}
+
+			public IActionResult Index(string nombreMision){ // Envía los detalles de la mision
+				return View(listado);}
+	
+	Models:
+		VM:
+			ViewModel // Clase que ofrece los datos de una mision actual seleccionada
+				public List<clsMisiones> listadoMisiones;
+
+				public ViewModel(){}
+
+				public ViewModel(string, string, string){}
 		
