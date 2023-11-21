@@ -9,8 +9,13 @@ namespace BonusTrack.Controllers
     {
         public IActionResult Index()
         {
-            List<clsMisiones> listaMisiones = ListadoMisiones.listarMisiones();
-            return View(listaMisiones);
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(clsMisiones detallesMisiones)
+        {
+            return View("Index");
         }
     }
 }

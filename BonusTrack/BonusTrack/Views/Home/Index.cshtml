@@ -1,22 +1,36 @@
 ﻿@using Biblioteca
-@model List<Biblioteca.clsMisiones>
+@using BonusTrack.Models
+@model clsMisiones
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
-@{  
-    if (Model != null){
-        
-        foreach (clsMisiones misiones in Model)
-        {
-            <hr/>
-            <h1>@misiones.NombreMision</h1>
-            <hr />
-        }
-    }
-    else
-    {
-        <p>No hay misiones</p>
-    }
+
+<select>
+    @{
+            foreach (clsMisiones misiones in ListadoMisiones.listarMisiones())
+            {
+                if (Model != null)
+                {
+                    <option selected value="@Model.NombreMision">@Model.NombreMision</option>
+                }
+                else
+                {
+                    <option value="@misiones.NombreMision">@misiones.NombreMision</option>
+                }              
+            }   
 }   
+
+</select>
+
+
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <button type="submit"
+            style="border:groove; border-radius:10px"
+            action="Index">
+        Detalles
+    </button>
+}
