@@ -1,0 +1,12 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/VSWorkspaceState.json
+/BonusTrack/.vs/BonusTrack/v17/.futdcache.v2
+/BonusTrack/.vs/ProjectEvaluation/bonustrack.metadata.v7.bin
+/BonusTrack/.vs/ProjectEvaluation/bonustrack.projects.v7.bin
+/EjerciciosUd8/.vs/EjerciciosUd8/v17/.futdcache.v2
+/EjerciciosUd8/.vs/EjerciciosUd8/v17/.suo
+/EjerciciosUd8/.vs/ProjectEvaluation/ejerciciosud8.metadata.v7.bin
+/EjerciciosUd8/.vs/ProjectEvaluation/ejerciciosud8.projects.v7.bin
