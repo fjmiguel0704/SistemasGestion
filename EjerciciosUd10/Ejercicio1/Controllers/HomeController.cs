@@ -1,32 +1,25 @@
 ﻿using Ejercicio1.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
+using Microsoft.Data.SqlClient;
 namespace Ejercicio1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
-            return View();
-        }
+            SqlConnection miConexion = new SqlConnection();
+            ViewBag.EstadoConexion = "No se ha podido conectar";
 
-        public IActionResult Privacy()
-        {
+            try {
+                miConexion.ConnectionString = "server=107-16\\SQLEXPRESS;database=persona;uid=usuario;pwd=123;trustServerCertificate=true";
+                miConexion.Open();
+                ViewBag.EstadoConexion = $"Conectado: {miConexion.State}";
+            } catch (Exception ex)
+            {
+                ViewBag.EstadoConexion = $"Error al conectar: {ex.Message}";
+            }
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
